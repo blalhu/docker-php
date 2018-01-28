@@ -1,1 +1,1 @@
-# docker-php56
+# docker-php
