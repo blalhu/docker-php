@@ -19,22 +19,22 @@ RUN apt-get update \
  && apt-get -y install \
     zip \
     unzip \
-    php7.0 \
-    php7.0-fpm \
-    php7.0-mysql \
-    php7.0-sqlite \
-    php7.0-pgsql \
-    php7.0-xml \
-    php7.0-mbstring \
-    php7.0-curl \
-    php7.0-zip \
-    php7.0-intl \
-    php7.0-imagick \
-    php7.0-gd
+    php5.6 \
+    php5.6-fpm \
+    php5.6-mysql \
+    php5.6-sqlite \
+    php5.6-pgsql \
+    php5.6-xml \
+    php5.6-mbstring \
+    php5.6-curl \
+    php5.6-zip \
+    php5.6-intl \
+    php5.6-imagick \
+    php5.6-gd
 
-RUN sed -i -- 's/www-data/app/g' /etc/php/7.0/fpm/pool.d/www.conf \
- && sed -i -- 's/listen[[:space:]]*=[[:space:]]*.*/listen = 0.0.0.0:8080/g' /etc/php/7.0/fpm/pool.d/www.conf
+RUN sed -i -- 's/www-data/app/g' /etc/php/5.6/fpm/pool.d/www.conf \
+ && sed -i -- 's/listen[[:space:]]*=[[:space:]]*.*/listen = 0.0.0.0:8080/g' /etc/php/5.6/fpm/pool.d/www.conf
 
-CMD service php7.0-fpm start \
- && service php7.0-fpm restart \
+CMD service php5.6-fpm start \
+ && service php5.6-fpm restart \
  && sleep infinity
