@@ -7,6 +7,7 @@ RUN useradd -mUG sudo app \
 
 RUN apt-get update \
  && apt-get -y install \
+    lsb-base \
     curl \
     zip \
     unzip \
